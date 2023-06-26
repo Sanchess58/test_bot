@@ -22,12 +22,8 @@ async def reminder(from_id: int):
     except ChatNotFound:
         print("Данного пользователя нет в базе")
 
-
-TOKEN = BOT_TOKEN
-YOOTOKEN = YOOTOKEN
-ADMIN = ADMIN
 storage = MemoryStorage()
-bot = Bot(token=TOKEN)
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot, storage=storage)
 apschedule = AsyncIOScheduler(timezone="Europe/Moscow")
 TIMER = False
